@@ -7,9 +7,9 @@ class Solution(object):
 
         count = 0
         prebit = 0
-        i = iMax - 1 
+        i = iMax - 1
         while i >= 0:
-            if n & 1<<i:
+            if n & 1 << i:
                 count += f[i]
                 if prebit == 1:
                     return count
@@ -17,10 +17,8 @@ class Solution(object):
             else:
                 prebit = 0
             i -= 1
-        
+
         return count + 1
-
-
 
 
 sol = Solution()

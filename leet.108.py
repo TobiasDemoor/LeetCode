@@ -5,7 +5,7 @@ class TreeNode(object):
         self.left = left
         self.right = right
 
-        
+
 class Solution(object):
     def sortedArrayToBST(self, nums):
         """
@@ -20,8 +20,9 @@ class Solution(object):
         root = TreeNode(nums[middle])
         root.left = self.sortedArrayToBST(nums[:middle])
         root.right = self.sortedArrayToBST(nums[middle+1:])
-        
+
         return root
 
+
 sol = Solution()
-print(sol.sortedArrayToBST([-10,-3,0,5,9]))
+print(sol.sortedArrayToBST([-10, -3, 0, 5, 9]))
