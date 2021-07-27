@@ -48,5 +48,3 @@ class Solution(object):
         if carry > 0:
             auxR.next = ListNode(carry)
         return head.next
-
-sol = Solution
