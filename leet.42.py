@@ -1,28 +1,28 @@
 # Solution 1: works but it is too slow
-# class Solution(object):
-#     def trap(self, height):
-#         """
-#         :type height: List[int]
-#         :rtype: int
-#         """
-#         check = True
-#         acum = 0
-#         level = 0
-#         while check:
-#             check = False
-#             count = 0
-#             for h in height:
-#                 if h > level:
-#                     if not check:
-#                         check = True
-#                         count = 0
-#                     else:
-#                         acum += count
-#                         count = 0
-#                 else:
-#                     count += 1
-#             level += 1
-#         return acum
+class Solution(object):
+    def trap(self, height):
+        """
+        :type height: List[int]
+        :rtype: int
+        """
+        check = True
+        acum = 0
+        level = 0
+        while check:
+            check = False
+            count = 0
+            for h in height:
+                if h > level:
+                    if not check:
+                        check = True
+                        count = 0
+                    else:
+                        acum += count
+                        count = 0
+                else:
+                    count += 1
+            level += 1
+        return acum
 
 # Solution 2: barely fast enough
 class Solution(object):
