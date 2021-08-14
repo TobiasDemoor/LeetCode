@@ -1,10 +1,5 @@
-class Solution(object):
-    def minFlipsMonoIncr(self, s):
-        """
-        :type s: str
-        :rtype: int
-        """
-
+class Solution:
+    def minFlipsMonoIncr(self, s: str) -> int:
         s = s.lstrip("0").rstrip("1")
         currentSum = s.count("0")
         minSum = currentSum

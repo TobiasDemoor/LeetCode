@@ -1,5 +1,8 @@
+from typing import List
+
+
 class Solution(object):
-    def stoneGame(self, piles):
+    def stoneGame(self, piles: List[int]) -> bool:
         """
         Answer is always true because the player who starts (Alex) can decide to pick up all the piles
         in odd indices or all the piles in even indices. And we know that:

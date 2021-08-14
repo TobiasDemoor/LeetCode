@@ -1,10 +1,9 @@
+from typing import List
+
+
 # Solution 1: does not work for certain cases
-class Solution(object):
-    def subsetsWithDup(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: List[List[int]]
-        """
+class Solution:
+    def subsetsWithDup(self, nums: List[int]) -> List[List[int]]:
         length = len(nums)
         if length == 0: return [[]]
         nums.sort()
@@ -23,12 +22,8 @@ class Solution(object):
         return power
 
 # Solution 2: works and is fast enough
-class Solution(object):
-    def subsetsWithDup(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: List[List[int]]
-        """
+class Solution:
+    def subsetsWithDup(self, nums: List[int]) -> List[List[int]]:
         nums.sort()
         if len(nums) == 0: return [[]]
         power = [[], nums]
@@ -55,11 +50,7 @@ class Solution(object):
                 result.append(child)
                 self.findSubsets(i+1, nums, child, result)
 
-    def subsetsWithDup(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: List[List[int]]
-        """
+    def subsetsWithDup(self, nums: List[int]) -> List[List[int]]:
         nums.sort()
         power = [[]]
         self.findSubsets(0, nums, [], power)

@@ -1,10 +1,9 @@
+from typing import List
+
+
 # Solution 1: works but it is too slow
-class Solution(object):
-    def trap(self, height):
-        """
-        :type height: List[int]
-        :rtype: int
-        """
+class Solution:
+    def trap(self, height: List[int]) -> int:
         check = True
         acum = 0
         level = 0
@@ -25,12 +24,8 @@ class Solution(object):
         return acum
 
 # Solution 2: barely fast enough
-class Solution(object):
-    def trap(self, height):
-        """
-        :type height: List[int]
-        :rtype: int
-        """
+class Solution:
+    def trap(self, height: List[int]) -> int:
         result = 0
         wallPos = -1
         subHeight = height

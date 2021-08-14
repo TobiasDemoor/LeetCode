@@ -1,11 +1,9 @@
+from typing import List
+
+
 # Solution 1: does not work for all cases
-class Solution(object):
-    def threeSumClosest(self, nums, target):
-        """
-        :type nums: List[int]
-        :type target: int
-        :rtype: int
-        """
+class Solution:
+    def threeSumClosest(self, nums: List[int], target: int) -> int:
         if len(nums) < 3:
             return -1
         closest = nums[:3]
@@ -25,13 +23,8 @@ class Solution(object):
         return closestSum
 
 # Solution 2: correct but slow ~O(n^3)
-class Solution(object):
-    def threeSumClosest(self, nums, target):
-        """
-        :type nums: List[int]
-        :type target: int
-        :rtype: int
-        """
+class Solution:
+    def threeSumClosest(self, nums: List[int], target: int) -> int:
         best = sum(nums[:3])
         bestDif = abs(best - target)
         l = len(nums)
@@ -53,13 +46,8 @@ class Solution(object):
         return best
 
 # Solution 3: correct and fast enough ~O(n^3)
-# class Solution(object):
-    def threeSumClosest(self, nums, target):
-        """
-        :type nums: List[int]
-        :type target: int
-        :rtype: int
-        """
+class Solution:
+    def threeSumClosest(self, nums: List[int], target: int) -> int:
         nums.sort()
         best = float("inf")
         bestDif = float("inf")
@@ -86,13 +74,8 @@ class Solution(object):
         return best
 
 # Solution 4: leetCode's solution ~O(n^2)
-class Solution(object):
-    def threeSumClosest(self, nums, target):
-        """
-        :type nums: List[int]
-        :type target: int
-        :rtype: int
-        """
+class Solution:
+    def threeSumClosest(self, nums: List[int], target: int) -> int:
         nums.sort()
         bestDif = float('inf')
         bestSum = float('inf')

@@ -1,9 +1,8 @@
-class Solution(object):
-    def canReorderDoubled(self, arr):
-        """
-        :type arr: List[int]
-        :rtype: bool
-        """
+from typing import List
+
+
+class Solution:
+    def canReorderDoubled(self, arr: List[int]) -> bool:
         s = []
         arr.sort()
         for n in arr:

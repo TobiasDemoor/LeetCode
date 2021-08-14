@@ -1,3 +1,6 @@
+from typing import List
+
+
 class Solution(object):
     def find(self, x, parent):
         if parent[x] == x: return x
@@ -15,11 +18,7 @@ class Solution(object):
             parent[x] = y
             rank[y] += rank[x]
 
-    def findRedundantConnection(self, edges):
-        """
-        :type edges: List[List[int]]
-        :rtype: List[int]
-        """
+    def findRedundantConnection(self, edges: List[List[int]]) -> List[int]:
         n = len(edges)
         parent = list(range(n+1))
         rank = [1] * (n+1)

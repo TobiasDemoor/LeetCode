@@ -1,3 +1,6 @@
+from typing import List
+
+
 class Solution(object):
     def find(self, pair, parent):
         i, j = pair
@@ -19,11 +22,7 @@ class Solution(object):
             parent[xi][xj] = y
             rank[yi][yj] += rank[xi][xj]
 
-    def matrixRankTransform(self, matrix):
-        """
-        :type matrix: List[List[int]]
-        :rtype: List[List[int]]
-        """
+    def matrixRankTransform(self, matrix: List[List[int]]) -> List[List[int]]:
         m = len(matrix)
         n = len(matrix[0])
 

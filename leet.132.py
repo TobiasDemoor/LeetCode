@@ -15,11 +15,7 @@ class Solution(object):
             auxDict[i][j] = val
             return val
 
-    def minCut(self, s):
-        """
-        :type s: str
-        :rtype: int
-        """
+    def minCut(self, s: str) -> int:
         auxDict = {}
 
         n = len(s)

@@ -1,10 +1,5 @@
-class Solution(object):
-    def addStrings(self, num1, num2):
-        """
-        :type num1: str
-        :type num2: str
-        :rtype: str
-        """
+class Solution:
+    def addStrings(self, num1: str, num2: str) -> str:
         hashMap = {}
         for i in range(10):
             for j in range(i, 10):

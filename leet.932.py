@@ -1,9 +1,8 @@
+from typing import List
+
+
 class Solution(object):
-    def beautifulArray(self, n):
-        """
-        :type n: int
-        :rtype: List[int]
-        """
+    def beautifulArray(self, n: int) -> List[int]:
         ans = [1]
         while len(ans) < n:
             tmp1 = []

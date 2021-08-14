@@ -1,9 +1,8 @@
-class Solution(object):
-    def updateMatrix(self, mat):
-        """
-        :type mat: List[List[int]]
-        :rtype: List[List[int]]
-        """
+from typing import List
+
+
+class Solution:
+    def updateMatrix(self, mat: List[List[int]]) -> List[List[int]]:
         m = len(mat)
         n = len(mat[0])
         rMat = []

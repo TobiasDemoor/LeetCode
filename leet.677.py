@@ -8,23 +8,14 @@ class MapSum(object):
         self.map = {}
         
 
-    def insert(self, key, val):
-        """
-        :type key: str
-        :type val: int
-        :rtype: None
-        """
+    def insert(self, key: str, val: int) -> None:
         self.map[key] = val
         
 
-    def sum(self, prefix):
-        """
-        :type prefix: str
-        :rtype: int
-        """
+    def sum(self, prefix: int) -> int:
         sum = 0
         for key in filter(lambda e : e.startswith(prefix) ,self.map.keys()):
-            sum +=self.map[key]
+            sum += self.map[key]
         return sum
 
 

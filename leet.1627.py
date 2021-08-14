@@ -1,3 +1,6 @@
+from typing import List
+
+
 class Solution(object):
     def find(self, x, parent):
         if parent[x] == x: return x
@@ -15,13 +18,7 @@ class Solution(object):
             parent[x] = y
             rank[y] += rank[x]
 
-    def areConnected(self, n, threshold, queries):
-        """
-        :type n: int
-        :type threshold: int
-        :type queries: List[List[int]]
-        :rtype: List[bool]
-        """
+    def areConnected(self, n: int, threshold: int, queries: List[List[int]]) -> List[bool]:
         parent = list(range(n+1))
         rank = [1] * (n+1)
 

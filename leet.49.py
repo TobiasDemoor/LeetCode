@@ -1,9 +1,8 @@
-class Solution(object):
-    def groupAnagrams(self, strs):
-        """
-        :type strs: List[str]
-        :rtype: List[List[str]]
-        """
+from typing import List
+
+
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
         groups = {}
         for s in strs:
             representative = "".join(sorted(s))

@@ -1,9 +1,11 @@
+from typing import List
+
+
 # Solution 1: minimum memory attempt
-class Solution(object):
-    def setZeroes(self, matrix):
+class Solution:
+    def setZeroes(self, matrix: List[List[int]]) -> None:
         """
-        :type matrix: List[List[int]]
-        :rtype: None Do not return anything, modify matrix in-place instead.
+        Do not return anything, modify matrix in-place instead.
         """
         m = len(matrix)
         n = len(matrix[0])
@@ -49,11 +51,10 @@ class Solution(object):
                 matrix[0] = [0]*n
 
 # Solution 2: faster and simpler
-class Solution(object):
-    def setZeroes(self, matrix):
+class Solution:
+    def setZeroes(self, matrix: List[List[int]]) -> None:
         """
-        :type matrix: List[List[int]]
-        :rtype: None Do not return anything, modify matrix in-place instead.
+        Do not return anything, modify matrix in-place instead.
         """
         m = len(matrix)
         n = len(matrix[0])

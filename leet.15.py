@@ -1,10 +1,9 @@
 # Solution 1: first solution I thought of, praise our lord hashmap
-class Solution(object):
-    def threeSum(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: List[List[int]]
-        """
+from typing import List
+
+
+class Solution:
+    def threeSum(self, nums: List[int]) -> List[List[int]]:
         output = []
         for i, n in enumerate(nums):
             hashMap = {}
@@ -21,12 +20,8 @@ class Solution(object):
         return output
 
 # Solution 2: tried to make it more efficient but was not successful
-# class Solution(object):
-#     def threeSum(self, nums):
-#         """
-#         :type nums: List[int]
-#         :rtype: List[List[int]]
-#         """
+# class Solution:
+#     def threeSum(self, nums: List[int]) -> List[List[int]]:
 #         nums.sort()
 #         length = len(nums)
 #         output = []

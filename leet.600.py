@@ -1,5 +1,5 @@
-class Solution(object):
-    def findIntegers(self, n):
+class Solution:
+    def findIntegers(self, n: int) -> int:
         iMax = len("{0:b}".format(n))
         f = [1, 2]
         for i in range(2, iMax):

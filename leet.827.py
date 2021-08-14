@@ -1,3 +1,6 @@
+from typing import List
+
+
 class Solution(object):
     def defineIsland(self, grid, id, hashMap, i, j, n):
         if grid[i][j] == 1:
@@ -12,11 +15,7 @@ class Solution(object):
             if j < n-1:
                 self.defineIsland(grid, id, hashMap, i, j+1, n)
 
-    def largestIsland(self, grid):
-        """
-        :type grid: List[List[int]]
-        :rtype: int
-        """
+    def largestIsland(self, grid: List[List[int]]) -> int:
 
         n = len(grid)
         # first define existing islands and their sizes
