@@ -5,25 +5,21 @@ import re
 class Solution:
     def findLUSlength(self, strs: List[str]) -> int:
         strs.sort(key=len)
-        last = [strs[0]]
+        lusList = [strs[0]]
         for i in range(1, len(strs)):
             string = strs[i]
-            lusList = []
-            for s in last:
-                if not bool(re.match(".*"+".*".join(s)+".*", string)):
-                    lusList.append(s)
+            lusList = list(filter(lambda s: not bool(re.match(".*"+".*".join(s)+".*", string)), lusList))
             j = i-1
             l = len(string)
             while j > -1 and len(strs[j]) == l and not strs[j] == string:
                 j -= 1
             if j == -1 or len(strs[j]) < l:
                 lusList.append(string)
-            last = lusList
 
-        if len(last) == 0:
+        if len(lusList) == 0:
             return -1
 
-        return len(last[-1])
+        return len(lusList[-1])
 
 
 sol = Solution()
