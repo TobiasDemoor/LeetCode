@@ -6,7 +6,7 @@ class Solution:
         stack = []
         res = 0
         for i, h in enumerate(height):
-            while stack and stack[-1][1] < h:
+            while stack and stack[-1][1] <= h:
                 _, h2 = stack.pop()
                 if stack:
                     j, h3 = stack[-1]
